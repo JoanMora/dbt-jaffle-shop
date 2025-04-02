@@ -1,8 +1,9 @@
+
 with
 
 source as (
 
-    select * from {{ source('ecom', 'supplies') }}
+    select * from {{ source('raw_mock', 'supplies') }}
 
 ),
 
@@ -15,13 +16,9 @@ renamed as (
         id as supply_id,
         sku as product_id,
 
-        ---------- text
+        ---------- properties
         name as supply_name,
-
-        ---------- numerics
-        {{ cents_to_dollars('cost') }} as supply_cost,
-
-        ---------- booleans
+        (cost / 100.0) as supply_cost,
         perishable as is_perishable_supply
 
     from source

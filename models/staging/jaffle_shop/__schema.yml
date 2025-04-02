@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_mock
+    database: gwkube
+    schema: raw_mock
+    tables:
+      - name: customers
+      - name: orders
+      - name: items
+      - name: products
+      - name: supplies 
