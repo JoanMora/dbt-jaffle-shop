@@ -3,7 +3,7 @@ version: '1.0.0'
 config-version: 2
 
 dbt-cloud:
-    project-id: 70471823394333
+    project-id: 70471823457290
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'jaffle_shop'
